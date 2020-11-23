@@ -26,7 +26,7 @@ public class HelpWindow {
              * if "fx:controller" is not set in fxml
              * fxmlLoader.setController(NewWindowController);
              */
-            Scene scene = new Scene(fxmlLoader.load(), 600, 400);
+            Scene scene = new Scene(fxmlLoader.load(), 800, 500);
             // css is not working currently due to the intelliJ license
 //            scene.getStylesheets().add("sample/view/css/styles.css");
             Stage stage = new Stage();

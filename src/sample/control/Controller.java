@@ -84,12 +84,20 @@ public class Controller implements Initializable {
             btnHit2.setDisable(true);
             btnStand2.setDisable(true);
             //------------- Dealer method HERE----------------------
-            Card pickedCard = pickCard(player, deck);
-            player.setHand(addToHand(player,pickedCard));
-            player.setSum(totalSum(player));
-            System.out.println(players.get(2));
-            playerInt = 0;
-            enableDisableButton(players.get(playerInt));
+            if(totalSum(player) <= 16) {
+                Card pickedCard = pickCard(player, deck);
+                player.setHand(addToHand(player, pickedCard));
+                player.setSum(totalSum(player));
+                System.out.println(players.get(2));
+                playerInt = 0;
+                enableDisableButton(players.get(playerInt));
+            }else if (totalSum(player) >= 22) {
+
+                System.out.println("Dealer bust");
+            }else {
+                System.out.println("Dear standing");
+            }
+
             //------------------------------------------------------
         }
     }
