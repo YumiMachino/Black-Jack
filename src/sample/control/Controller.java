@@ -84,7 +84,7 @@ public class Controller implements Initializable {
             btnHit2.setDisable(true);
             btnStand2.setDisable(true);
             //------------- Dealer method HERE----------------------
-            if(totalSum(player) <= 16) {
+            if(totalSum(player) < 17) {
                 Card pickedCard = pickCard(player, deck);
                 player.setHand(addToHand(player, pickedCard));
                 player.setSum(totalSum(player));
